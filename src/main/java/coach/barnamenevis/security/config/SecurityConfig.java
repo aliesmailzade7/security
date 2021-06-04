@@ -62,7 +62,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                             redirectStrategy.sendRedirect(httpServletRequest,httpServletResponse,"/");
                     }
                 })
-                .and().logout().logoutUrl("/login");
+                .and().logout().deleteCookies("JSESSIONID");
     }
 
     @Bean
